@@ -46,9 +46,16 @@ class MyAppState extends State<MyApp> {
                     onTap: () {
                       showTopSnackBar(
                         Overlay.of(context),
-                        const CustomSnackBar.success(
-                          message:
-                              'Good job, your release is successful. Have a nice day',
+                        CustomSnackBar.success(
+                          trailingWidget: Container(
+                            height: 34,
+                            decoration: BoxDecoration(color: Colors.white),
+                            width: 37,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                          message: 'Accepted Successfully',
+                          messagePadding: EdgeInsets.only(left: 12, right: 12),
+                          height: 58,
                         ),
                       );
                     },
